@@ -24,7 +24,7 @@
             android:layout_height="match_parent"
             android:focusable="true" />
 
-        <org.proninyaroslav.libretorrent.ui.customviews.ExpansionHeader
+        <com.full.torrent.no.ads.private1.encrypted.ui.customviews.ExpansionHeader
             android:id="@+id/tags_group_header"
             android:layout_width="wrap_content"
             android:layout_height="48dp"
@@ -178,5 +178,27 @@
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
                 android:layout_toEndOf="@id/upload_icon" />
         </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/donater"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/size_8dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Support Us"
+                android:textSize="20dp"
+                android:textColor="#040404"
+                />
+            <TextView
+                android:id="@+id/Donate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                 android:text="Buy Fulldive a cup of coffee"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Body1" />
+        </LinearLayout>
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>
