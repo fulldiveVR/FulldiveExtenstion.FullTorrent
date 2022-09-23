@@ -39,34 +39,41 @@ android {
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
     }
 
+    signingConfigs {
+        release {
+            storeFile file('../keys/keys.jks')
+            storePassword System.getenv("FULLDIVE_KEYSTORE_PASSWORD")
+            keyAlias System.getenv("FULLDIVE_ALIAS")
+            keyPassword System.getenv("FULLDIVE_ALIAS_PASSWORD")
+        }
+    }
+
     flavorDimensions "deploy"
 
     productFlavors {
         orginal {
             dimension "deploy"
         }
-//        play {
-//            dimension "deploy"
-//        }
+        play {
+            dimension "deploy"
+        }
     }
 
     buildTypes {
         /* Enable or disable logging in build types */
         def SESSION_LOGGING = 'SESSION_LOGGING'
-
         release {
-            minifyEnabled false
+            signingConfig signingConfigs.release
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-
             buildConfigField('boolean', SESSION_LOGGING, 'false')
         }
-
         debug {
-          //  versionNameSuffix '-DEBUG'
             testCoverageEnabled true
+            minifyEnabled false
             debuggable true
-
-            buildConfigField('boolean', SESSION_LOGGING, 'true')        }
+            buildConfigField('boolean', SESSION_LOGGING, 'true')
+        }
     }
 
     splits {
