@@ -32,6 +32,13 @@ allprojects {
     }
 }
 
+gradle.projectsEvaluated {
+    tasks.withType(JavaCompile) {
+        options.incremental = false
+
+    }
+}
+
 task clean(type: Delete) {
     delete rootProject.buildDir
 }

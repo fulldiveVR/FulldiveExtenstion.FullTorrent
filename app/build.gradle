@@ -15,9 +15,9 @@ android {
          * Convection:
          *  major.minor.[revision][-some_info]
          */
-        versionCode versionMajor*10000+versionMinor*100+versionPatch
+        versionCode versionMajor * 10000 + versionMinor * 100 + versionPatch
         versionName "${versionMajor}.${versionMinor}.${versionPatch}"
-        resValue "string","app_version", "${defaultConfig.versionName}"
+        resValue "string", "app_version", "${defaultConfig.versionName}"
         applicationVariants.all { variant ->
             variant.outputs.each { output ->
                 output.outputFileName = "FullTorrent-v${android.defaultConfig.versionName}-${variant.buildType.name}.apk"
@@ -54,9 +54,9 @@ android {
         orginal {
             dimension "deploy"
         }
-        play {
-            dimension "deploy"
-        }
+//        play {
+//            dimension "deploy"
+//        }
     }
 
     buildTypes {
