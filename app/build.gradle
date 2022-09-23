@@ -45,9 +45,9 @@ android {
         orginal {
             dimension "deploy"
         }
-        play {
-            dimension "deploy"
-        }
+//        play {
+//            dimension "deploy"
+//        }
     }
 
     buildTypes {
@@ -62,7 +62,7 @@ android {
         }
 
         debug {
-            versionNameSuffix '-DEBUG'
+          //  versionNameSuffix '-DEBUG'
             testCoverageEnabled true
             debuggable true
 
