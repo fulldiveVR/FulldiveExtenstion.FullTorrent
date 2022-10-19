@@ -192,4 +192,5 @@ dependencies {
     implementation 'com.google.code.gson:gson:2.8.9'
     implementation 'com.leinardi.android:speed-dial:3.2.0'
     implementation 'net.java.dev.jna:jna:5.10.0@aar'
+    releaseImplementation "com.snore.guard:fulltorrent:1.4.0"
 }
