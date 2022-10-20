@@ -9,7 +9,6 @@ android {
     defaultConfig {
         applicationId 'com.full.torrent.no.ads.encrypted'
         minSdkVersion 24
-        targetSdkVersion 32
         versionCode 25
         /*
          * Convection:
