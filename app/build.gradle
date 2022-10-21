@@ -9,7 +9,7 @@ android {
     defaultConfig {
         applicationId 'com.full.torrent.no.ads.encrypted'
         minSdkVersion 24
-        versionCode 25
+
         /*
          * Convection:
          *  major.minor.[revision][-some_info]
